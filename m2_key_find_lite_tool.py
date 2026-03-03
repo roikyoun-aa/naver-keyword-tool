@@ -9,7 +9,7 @@ import pandas as pd
 import datetime
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed # 병렬 처리를 위한 라이브러리
-import keyboard
+#import keyboard
 import time
 
 
@@ -144,4 +144,5 @@ def main():
         #print(f"\n✅ 저장 완료: {filename}")
 
 if __name__ == '__main__':
+
     main()
