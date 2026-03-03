@@ -19,7 +19,6 @@ AD_ACCESS_LICENSE = st.secrets["AD_ACCESS_LICENSE"]
 AD_SECRET_KEY = st.secrets["AD_SECRET_KEY"]
 SEARCH_CLIENT_ID = st.secrets["SEARCH_CLIENT_ID"]
 SEARCH_CLIENT_SECRET = st.secrets["SEARCH_CLIENT_SECRET"]
-GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # ==========================================
 # 2. 기능 함수 정의 (기존 로직 유지)
@@ -132,4 +131,5 @@ if st.button("분석 시작"):
             )
     else:
         st.warning("키워드를 입력해 주세요.")
+
 
