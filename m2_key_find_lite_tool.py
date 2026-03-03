@@ -13,12 +13,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # ==========================================
 # 1. API 설정 (st.secrets 사용 권장)
 # ==========================================
-# 실제 배포 시에는 Streamlit Cloud의 Secrets 설정을 이용하세요.
-AD_CUSTOMER_ID = '4242379'
-AD_ACCESS_LICENSE = '0100000000be60fd64d572d7bbd6fb5003c04aa9fe6968d0512dd5dd9111328f3ca2ae9eb5'
-AD_SECRET_KEY = 'AQAAAAC+YP1k1XLXu9b7UAPASqn+j7RoBGxd+yeQ35LFZBgkuw=='
-SEARCH_CLIENT_ID = 'FlFFNqzQOrBJIu1W1wX4'
-SEARCH_CLIENT_SECRET = 'XMeMWgMHsN'
+
+AD_CUSTOMER_ID = st.secrets["AD_CUSTOMER_ID"]
+AD_ACCESS_LICENSE = st.secrets["AD_ACCESS_LICENSE"]
+AD_SECRET_KEY = st.secrets["AD_SECRET_KEY"]
+SEARCH_CLIENT_ID = st.secrets["SEARCH_CLIENT_ID"]
+SEARCH_CLIENT_SECRET = st.secrets["SEARCH_CLIENT_SECRET"]
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # ==========================================
 # 2. 기능 함수 정의 (기존 로직 유지)
@@ -131,3 +132,4 @@ if st.button("분석 시작"):
             )
     else:
         st.warning("키워드를 입력해 주세요.")
+
